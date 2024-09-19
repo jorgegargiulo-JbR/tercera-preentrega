@@ -75,6 +75,11 @@ header .logo img{
 
 /* Barra de navegación Bootstrap */
 
+.navbar {
+    background-color: rgba(255, 255, 255, 1); /* Color de fondo completamente opaco */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
 .navbar .nav-link{
     color:black;
     font-size: 1.25rem;
@@ -473,7 +478,6 @@ main .contenido3 .titulo h1, main .contenido3 .titulo h2{
     font-weight: bolder;
 }
 
-
 main .contenido3 .formulario-container .mapa{
     display: flex;
     flex-direction: column;
@@ -548,18 +552,41 @@ header .header1{
 }
 
   /* Barra de navegación */
+
 .navbar {
     flex-direction: column;
     padding: 0;
+    background-color: rgba(255, 255, 255, 1); 
 }
+
+ /* Barra de navegación cuando el menú móvil está abierto */
+ .navbar .collapse.show {
+    background-color: hsla(96, 57%, 43%, 0.3) ;
+     /* Fondo semitransparente con tono negro */
+  }
 
 .navbar .navbar-toggler {
     margin: 0 auto;
+    border: none;
 }
+
+/* Evitar que el botón quede marcado en negro después de hacer clic */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent; /* Evita que el fondo cambie a negro */
+  border: none; /* Elimina cualquier borde que pueda aparecer */
+}
+
 
 .navbar .navbar-nav {
     text-align: center;
+    
+    
 }
+
+
 
   /* Main */
 main .contenido {
