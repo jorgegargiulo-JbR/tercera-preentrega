@@ -261,6 +261,11 @@ footer .datos .telefonos p i {
 
 /* Estilos para el main de SERVICIOS */
 
+main .contenido{
+    height: 100%;
+    padding-bottom: .625rem;
+}
+
 main .contenido .titulo{
     display: flex;
     align-items: center;
@@ -270,14 +275,14 @@ main .contenido .titulo{
 
 main .contenido .titulo h1, main .contenido .titulo h2{
     padding-top: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 0;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
 main .losServicios{
-    margin: 90px;
+    margin: 5.625rem;
 }
 
 #lp, #pm, #me, #ph, #os{
@@ -581,13 +586,9 @@ header .header1{
   border: none; /* Elimina cualquier borde que pueda aparecer */
 }
 
-
 .navbar .navbar-nav {
     text-align: center;
-    
-    
 }
-
 
 
   /* Main */
@@ -681,16 +682,17 @@ footer address, footer .telefonos {
         text-align: center;       
     }
 
-    main .contenido2 .titulo h1{
+    main .contenido2 .titulo h2{
         font-size: 1.25rem;
         white-space: nowrap;
         padding-top: 1.875rem;
     }
 
-    main .contenido2 .titulo h2{
+    main .contenido2 .titulo h1{
         font-size: 1.25rem;
         white-space: nowrap;
         padding-top: .625rem;
+        
     }
 
     main .contenido2 .losTrabajos{
@@ -718,5 +720,6 @@ footer address, footer .telefonos {
 
 
 
+/* Media Querie mobile para SERVICIOS
 
 
