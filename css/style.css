@@ -720,6 +720,152 @@ footer address, footer .telefonos {
 
 
 
-/* Media Querie mobile para SERVICIOS
+/* Media Querie mobile para SERVICIOS */
+
+@media (max-width: 575.98px){
+
+/* Main */
+
+    main .contenido .titulo {
+        display:  block !important;
+        text-align: center;       
+    }
+
+    main .contenido .titulo h2{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 1.25rem;
+    }
+
+    main .contenido .titulo h1{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: .1875rem;
+    }
+
+    main .contenido .losServicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    main .contenido .losServicios h3{
+        text-align: center;
+        font-size: 1.25rem;
+        margin-top: 1.5625rem;
+    }
+
+    main .contenido .losServicios .caja1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .contenido .losServicios .caja1 img{
+        max-width: 31.25rem;
+        
+    }
+
+    main .contenido .losServicios .caja1 p{
+        padding: .9375rem 0 .5rem 0;
+        max-width: 100%;
+    }
+
+    main .contenido section #os{
+        font-size: 1.25rem;
+        font-weight: bolder;
+        padding-top: .9375rem;
+    }
+
+    main .contenido section .otrosServicios{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5625rem
+    }
+
+    main .contenido section .otrosServicios .servicio h3{
+        font-size: 1.25rem;
+        padding-bottom: .3125rem;
+    }
+}
 
 
+/* Media Querie mobile para CLIENTES */
+
+@media (max-width: 575.98px){
+
+/* Main */
+
+    main .contenido2 .losClientes{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.125rem;
+    }
+
+main .contenido2 .losClientes img{
+    display: block;
+    width: 18.75rem;
+    height: 25rem;
+    margin-right: 6.25rem;
+    }
+    
+}
+
+
+/* Media Querie mobile para CONTACTO */
+
+@media (max-width: 576px) {
+
+    /* Main */
+
+    main .contenido3 .titulo{
+        display:  block !important;
+        text-align: center;       
+    }
+
+    main .contenido3 .titulo h2{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 1.875rem;
+    }
+    
+    main .contenido3 .titulo h1{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 0;
+        
+    }
+
+    main .contenido3 .formulario-container{
+        display: flex;
+        flex-direction: column;
+        width: 23.75rem;
+        padding-bottom: .9375rem;
+        
+    }
+
+    main .contenido3 .formulario-container .mapa img{
+        margin-left: .625rem;
+    }
+
+    main .contenido3 .formulario-container .mapa p{
+        font-size: 1.125rem;
+        margin-left: 3.125rem;
+        margin-bottom: 3.125rem;
+    }
+
+    .submit-btn{
+        margin-left: 10rem;
+        margin-bottom: .3125rem;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        padding-left: .625rem;
+        padding-right: .625rem;
+        background-color:hsla(96, 57%, 43%, 0.3);
+        color:#000000;
+        border: none;
+    }
+
+    }
