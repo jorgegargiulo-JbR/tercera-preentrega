@@ -205,6 +205,12 @@ main .servicios .tilde a h3{
     font-size: 1.3rem;
 }
 
+main .servicios .tilde a h3 span{
+    display: block;
+}
+
+
+
 main .servicios .tilde a:hover{
     color: #61AD2F;
 }
@@ -510,82 +516,25 @@ main .contenido3 .formulario-container{
   }
   
   main .contenido3 .formulario-container .mapa p{
-    font-size: 1.5625rem;
+    font-size: 1.875rem;
     margin: 0;
     text-align: center;
-    padding-top: 1vh; 
+    /*padding-top: 1vh; */
   }
 
-  main .contenido3 .formulario-container form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  main .contenido3 .formulario-container form .form-control{
-    margin-bottom: 15px;
-  }
-  
-  main .contenido3 .formulario-container form input,
-  main .contenido3 .formulario-container form textarea{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .submit-btn{
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Media queries para móviles */
-  @media (max-width: 768px) {
-    main .contenido3 .formulario-container {
-      grid-template-columns: 1fr; /* Mapa y formulario apilados uno sobre otro en pantallas pequeñas */
-      gap: .625rem;
-    }
-  
-    main .contenido3 .formulario-container .mapa img {
-      width: 100%; /* El mapa toma todo el ancho en pantallas pequeñas */
-    }
-
-    main .contenido3 .formulario-container .mapa p{
-        font-size: 1.0625rem;
-        margin-bottom: .625rem;
-        padding-top: 0;
-    }
-  
-    .submit-btn {
-      width: 100%;
-    }
-  }
-  
-
-
-
-
-
-
-
-  
   .form-control{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 15px;
   }
-  
-  textarea {
+
+  textarea{
     width: 100%; 
     box-sizing: border-box; 
   }
   
-  input, textarea {
+  input, textarea{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -593,11 +542,37 @@ main .contenido3 .formulario-container{
   
   .submit-btn{
     display: block;
-    width: 9.375rem;
+    width: 90%;
     margin: 0 auto;
     background-color: hsla(96, 57%, 43%, 0.3);
     font-weight: bold;
+    border: .0625rem solid #61AD2F;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
+
+  .submit-btn:hover{
+    color: #ffffff;
+    background-color: #61AD2F;
+  }
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+ 
+  
+  
 
 
 
@@ -748,7 +723,7 @@ footer address, footer .telefonos {
 /* Media Querie sm (mobile-Bootstrap) para TRABAJOS */
 
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
 
     /* Main */
 
@@ -891,7 +866,7 @@ main .contenido2 .losClientes img{
 
 /* Media Querie mobile para CONTACTO */
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
 
     /* Main */
 
@@ -910,8 +885,26 @@ main .contenido2 .losClientes img{
         font-size: 1.25rem;
         white-space: nowrap;
         padding-top: 0;
-        
     }
+
+    main .contenido3 .formulario-container {
+        grid-template-columns: 1fr; /* Mapa y formulario apilados uno sobre otro en pantallas pequeñas */
+        gap: .625rem;
+    }
+  
+    main .contenido3 .formulario-container .mapa img {
+        width: 100%; /* El mapa toma todo el ancho en pantallas pequeñas */
+    } */
+
+    main .contenido3 .formulario-container .mapa p{
+        font-size: 1.0625rem;
+        margin-bottom: .625rem;
+        padding-top: 0;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+  }
 
     
 
