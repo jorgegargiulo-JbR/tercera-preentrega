@@ -499,48 +499,48 @@ main .contenido3 .formulario-container{
     gap: 20px; 
     align-items: start; 
     padding: 20px;
-    }
+}
 
-  main .contenido3 .formulario-container .mapa{
+main .contenido3 .formulario-container .mapa{
     display: grid;
     grid-template-rows: 1fr auto; 
     gap: 10px; 
     align-items: center;
     justify-items: center;
-  }
-  
-  main .contenido3 .formulario-container .mapa img{
+}
+
+main .contenido3 .formulario-container .mapa img{
     width: 100%; 
     padding-bottom: .625rem;
     height: auto;
-  }
-  
-  main .contenido3 .formulario-container .mapa p{
+}
+
+main .contenido3 .formulario-container .mapa p{
     font-size: 1.875rem;
     margin: 0;
     text-align: center;
     padding-bottom: .625rem;
-  }
+}
 
-  .form-control{
+.form-control{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 15px;
-  }
+}
 
-  textarea{
+textarea{
     width: 100%; 
     box-sizing: border-box; 
-  }
-  
-  input, textarea{
+}
+
+input, textarea{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .submit-btn{
+}
+
+.submit-btn{
     display: block;
     width: 90%;
     margin: 0 auto;
@@ -549,32 +549,12 @@ main .contenido3 .formulario-container{
     border: .0625rem solid #61AD2F;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+}
 
-  .submit-btn:hover{
+.submit-btn:hover{
     color: #ffffff;
     background-color: #61AD2F;
-  }
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-  
- 
-  
-  
-
-
+}
 
 
 /* Media Querie sm (mobile-Bootstrap) para INDEX */
@@ -694,7 +674,7 @@ main .servicios .tilde{
 
 .tilde h3{
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
 }
 
   /* Footer */
@@ -866,7 +846,7 @@ main .contenido2 .losClientes img{
 
 /* Media Querie mobile para CONTACTO */
 
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px){
 
     /* Main */
 
@@ -904,10 +884,6 @@ main .contenido2 .losClientes img{
     .submit-btn {
         width: 100%;
     }
-  }
+}
 
-    
 
-    
-
-    }
