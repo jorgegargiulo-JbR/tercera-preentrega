@@ -428,7 +428,8 @@ main .contenido2 .losTrabajos .trabajo{
 
 main .contenido2 .losTrabajos img{
     width: 80%;
-    object-fit: contain;
+    height: 25rem;
+    object-fit: cover;
 }
 
 main .contenido2 .losTrabajos p{
@@ -485,46 +486,120 @@ main .contenido3 .titulo h1, main .contenido3 .titulo h2{
     font-weight: bolder;
 }
 
-main .contenido3 .formulario-container .mapa{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin-right: 20px; 
-}
-
-main .contenido3 .formulario-container .mapa img {
-    width: 100%; 
-    max-width: 43.75rem;
-}
-
-main .contenido3 .formulario-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 75%;
-}
-
-main .contenido3 .formulario-container form {
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
-    max-width: 400px; 
-}
-
-main .contenido3 .formulario-container form .submit-btn {
-    margin-top: 30px; 
-    align-self: flex-start; 
-}
-
-@media (min-width: 768px) {
-    .formulario-container {
-    display: flex;
-    justify-content: space-between; 
+main .contenido3 .formulario-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 20px; 
+    align-items: start; 
+    padding: 20px;
     }
 
-.mapa, form {
-    flex: 1; 
+  main .contenido3 .formulario-container .mapa{
+    display: grid;
+    grid-template-rows: 1fr auto; 
+    gap: 10px; 
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main .contenido3 .formulario-container .mapa img{
+    width: 100%; 
+    padding-bottom: .625rem;
+    height: auto;
+  }
+  
+  main .contenido3 .formulario-container .mapa p{
+    font-size: 1.5625rem;
+    margin: 0;
+    text-align: center;
+    padding-top: 1vh; 
+  }
+
+  main .contenido3 .formulario-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  main .contenido3 .formulario-container form .form-control{
+    margin-bottom: 15px;
+  }
+  
+  main .contenido3 .formulario-container form input,
+  main .contenido3 .formulario-container form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Media queries para móviles */
+  @media (max-width: 768px) {
+    main .contenido3 .formulario-container {
+      grid-template-columns: 1fr; /* Mapa y formulario apilados uno sobre otro en pantallas pequeñas */
+      gap: .625rem;
     }
-}
+  
+    main .contenido3 .formulario-container .mapa img {
+      width: 100%; /* El mapa toma todo el ancho en pantallas pequeñas */
+    }
+
+    main .contenido3 .formulario-container .mapa p{
+        font-size: 1.0625rem;
+        margin-bottom: .625rem;
+        padding-top: 0;
+    }
+  
+    .submit-btn {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+
+  
+  .form-control{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  textarea {
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn{
+    display: block;
+    width: 9.375rem;
+    margin: 0 auto;
+    background-color: hsla(96, 57%, 43%, 0.3);
+    font-weight: bold;
+  }
+
+
 
 
 /* Media Querie sm (mobile-Bootstrap) para INDEX */
@@ -665,7 +740,7 @@ footer address, footer .telefonos {
 
 .copyright {
     margin: .9375rem;
-    font-size: 0.7rem;
+    font-size: .625rem;
 }
 }
 
@@ -838,34 +913,8 @@ main .contenido2 .losClientes img{
         
     }
 
-    main .contenido3 .formulario-container{
-        display: flex;
-        flex-direction: column;
-        width: 23.75rem;
-        padding-bottom: .9375rem;
-        
-    }
+    
 
-    main .contenido3 .formulario-container .mapa img{
-        margin-left: .625rem;
-    }
-
-    main .contenido3 .formulario-container .mapa p{
-        font-size: 1.125rem;
-        margin-left: 3.125rem;
-        margin-bottom: 3.125rem;
-    }
-
-    .submit-btn{
-        margin-left: 10rem;
-        margin-bottom: .3125rem;
-        padding-top: .3125rem;
-        padding-bottom: .3125rem;
-        padding-left: .625rem;
-        padding-right: .625rem;
-        background-color:hsla(96, 57%, 43%, 0.3);
-        color:#000000;
-        border: none;
-    }
+    
 
     }
