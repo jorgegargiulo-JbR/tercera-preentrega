@@ -519,7 +519,7 @@ main .contenido3 .formulario-container{
     font-size: 1.875rem;
     margin: 0;
     text-align: center;
-    /*padding-top: 1vh; */
+    padding-bottom: .625rem;
   }
 
   .form-control{
