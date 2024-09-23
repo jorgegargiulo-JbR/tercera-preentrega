@@ -557,29 +557,9 @@ main .contenido3 .formulario-container{
   }
 
 
-
-
-  
-  
-  
-
-
-
-
-
-
-
-  
- 
-  
-  
-
-
-
-
 /* Media Querie sm (mobile-Bootstrap) para INDEX */
 
-@media (max-width: 575.98px) {
+@media (max-width: 575.98px){
 
 
 header .header1{
@@ -643,14 +623,15 @@ header .header1{
 
   /* Main */
 main .contenido {
-    padding: 10px;
+    padding: .625rem;
+    width: 91vw;
 }
 
 main .contenido h1{   
     padding-top: 3%;
     padding-bottom: 2%;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bolder;
     margin-top: .9375rem;
 }
@@ -905,3 +886,81 @@ main .contenido2 .losClientes img{
         width: 100%;
     }
   }
+
+  /* Media Querie para tablet */
+
+  @media (max-width: 767.98px){
+
+/* Estilos para la barra de navegación */
+
+    .navbar{
+        flex-direction: column;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 1); 
+    }
+
+    .transparent-rectangle{
+        width: 50vw;
+    }
+
+    .navbar .collapse.show{
+        background-color: hsla(96, 57%, 43%, 0.3) ;
+    }
+    
+    .navbar .navbar-toggler{
+        margin: 0 auto;
+        border: none;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent; 
+    border: none;
+    }
+
+    .navbar .navbar-nav{
+        text-align: center;
+    }
+
+/* Estilos para el main INDEX */
+
+    main .contenido h1{
+        font-size: 1.5625rem;
+    }
+
+    main .contenido article{
+        font-size: .9375rem;
+    }
+
+    main .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "lp pm me"
+            "ph . os";
+        gap: .9375rem;
+        justify-items: center;
+        align-items: center;
+        
+    }
+
+    main .servicios .tilde{
+        max-width: 7.5rem;
+        height: 11.25rem;
+    }
+
+    main .servicios .tilde:nth-child(4){
+        grid-area: ph;
+    }
+
+    main .servicios .tilde:nth-child(5){
+        grid-area: os;
+    }
+        
+    .tilde h3{
+        font-size: .9375rem !important;
+
+    }
+  }   
