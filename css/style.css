@@ -75,6 +75,11 @@ header .logo img{
 
 /* Barra de navegación Bootstrap */
 
+.navbar {
+    background-color: rgba(255, 255, 255, 1); /* Color de fondo completamente opaco */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
 .navbar .nav-link{
     color:black;
     font-size: 1.25rem;
@@ -122,7 +127,7 @@ header .logo img{
 
 main{
     margin-top: 12.5rem;
-    background-image: url(../assets/backgrounds/comodoro2-laptop-l.jpg);
+    background-image: url(../assets/comodoro2-laptop-l.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -200,6 +205,12 @@ main .servicios .tilde a h3{
     font-size: 1.3rem;
 }
 
+main .servicios .tilde a h3 span{
+    display: block;
+}
+
+
+
 main .servicios .tilde a:hover{
     color: #61AD2F;
 }
@@ -256,6 +267,11 @@ footer .datos .telefonos p i {
 
 /* Estilos para el main de SERVICIOS */
 
+main .contenido{
+    height: 100%;
+    padding-bottom: .625rem;
+}
+
 main .contenido .titulo{
     display: flex;
     align-items: center;
@@ -265,14 +281,14 @@ main .contenido .titulo{
 
 main .contenido .titulo h1, main .contenido .titulo h2{
     padding-top: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 0;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
 main .losServicios{
-    margin: 90px;
+    margin: 5.625rem;
 }
 
 #lp, #pm, #me, #ph, #os{
@@ -303,7 +319,8 @@ main .losServicios .caja1{
 
 main .losServicios .caja1 p {
     max-width: 55%;
-    text-align: justify;
+    text-align: left;
+    padding-left: 4.375rem;
     font-size: 16px;
     line-height: 1.5;
     color: #000000;
@@ -417,13 +434,15 @@ main .contenido2 .losTrabajos .trabajo{
 
 main .contenido2 .losTrabajos img{
     width: 80%;
-    
-    object-fit: contain;
+    height: 25rem;
+    object-fit: cover;
 }
 
 main .contenido2 .losTrabajos p{
     margin-top: .625rem;
-    font-size: 1.875rem;
+    margin-bottom: 0;
+    font-size: 1.5625rem;
+    line-height: 1.2;
 }
 
 
@@ -473,47 +492,89 @@ main .contenido3 .titulo h1, main .contenido3 .titulo h2{
     font-weight: bolder;
 }
 
-
-main .contenido3 .formulario-container .mapa{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin-right: 20px; 
-}
-
-main .contenido3 .formulario-container .mapa img {
-    width: 100%; 
-    max-width: 43.75rem;
-}
-
-main .contenido3 .formulario-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 75%;
-}
-
-main .contenido3 .formulario-container form {
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
-    max-width: 400px; 
-}
-
-main .contenido3 .formulario-container form .submit-btn {
-    margin-top: 30px; 
-    align-self: flex-start; 
-}
-
-@media (min-width: 768px) {
-    .formulario-container {
-    display: flex;
-    justify-content: space-between; 
+main .contenido3 .formulario-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 20px; 
+    align-items: start; 
+    padding: 20px;
     }
 
-.mapa, form {
-    flex: 1; 
-    }
-}
+  main .contenido3 .formulario-container .mapa{
+    display: grid;
+    grid-template-rows: 1fr auto; 
+    gap: 10px; 
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main .contenido3 .formulario-container .mapa img{
+    width: 100%; 
+    padding-bottom: .625rem;
+    height: auto;
+  }
+  
+  main .contenido3 .formulario-container .mapa p{
+    font-size: 1.875rem;
+    margin: 0;
+    text-align: center;
+    /*padding-top: 1vh; */
+  }
+
+  .form-control{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  textarea{
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  input, textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    background-color: hsla(96, 57%, 43%, 0.3);
+    font-weight: bold;
+    border: .0625rem solid #61AD2F;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .submit-btn:hover{
+    color: #ffffff;
+    background-color: #61AD2F;
+  }
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+ 
+  
+  
+
+
 
 
 /* Media Querie sm (mobile-Bootstrap) para INDEX */
@@ -548,18 +609,37 @@ header .header1{
 }
 
   /* Barra de navegación */
+
 .navbar {
     flex-direction: column;
     padding: 0;
+    background-color: rgba(255, 255, 255, 1); 
 }
+
+ /* Barra de navegación cuando el menú móvil está abierto */
+ .navbar .collapse.show {
+    background-color: hsla(96, 57%, 43%, 0.3) ;
+     /* Fondo semitransparente con tono negro */
+  }
 
 .navbar .navbar-toggler {
     margin: 0 auto;
+    border: none;
+}
+
+/* Evitar que el botón quede marcado en negro después de hacer clic */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent; /* Evita que el fondo cambie a negro */
+  border: none; /* Elimina cualquier borde que pueda aparecer */
 }
 
 .navbar .navbar-nav {
     text-align: center;
 }
+
 
   /* Main */
 main .contenido {
@@ -635,7 +715,7 @@ footer address, footer .telefonos {
 
 .copyright {
     margin: .9375rem;
-    font-size: 0.7rem;
+    font-size: .625rem;
 }
 }
 
@@ -643,7 +723,7 @@ footer address, footer .telefonos {
 /* Media Querie sm (mobile-Bootstrap) para TRABAJOS */
 
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
 
     /* Main */
 
@@ -652,16 +732,17 @@ footer address, footer .telefonos {
         text-align: center;       
     }
 
-    main .contenido2 .titulo h1{
+    main .contenido2 .titulo h2{
         font-size: 1.25rem;
         white-space: nowrap;
         padding-top: 1.875rem;
     }
 
-    main .contenido2 .titulo h2{
+    main .contenido2 .titulo h1{
         font-size: 1.25rem;
         white-space: nowrap;
         padding-top: .625rem;
+        
     }
 
     main .contenido2 .losTrabajos{
@@ -689,5 +770,144 @@ footer address, footer .telefonos {
 
 
 
+/* Media Querie mobile para SERVICIOS */
+
+@media (max-width: 575.98px){
+
+/* Main */
+
+    main .contenido .titulo {
+        display:  block !important;
+        text-align: center;       
+    }
+
+    main .contenido .titulo h2{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 1.25rem;
+    }
+
+    main .contenido .titulo h1{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: .1875rem;
+    }
+
+    main .contenido .losServicios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    main .contenido .losServicios h3{
+        text-align: center;
+        font-size: 1.25rem;
+        margin-top: 1.5625rem;
+    }
+
+    main .contenido .losServicios .caja1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .contenido .losServicios .caja1 img{
+        max-width: 31.25rem;
+        
+    }
+
+    main .contenido .losServicios .caja1 p{
+        padding: .9375rem 0 .5rem 0;
+        max-width: 100%;
+    }
+
+    main .contenido section #os{
+        font-size: 1.25rem;
+        font-weight: bolder;
+        padding-top: .9375rem;
+    }
+
+    main .contenido section .otrosServicios{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5625rem
+    }
+
+    main .contenido section .otrosServicios .servicio h3{
+        font-size: 1.25rem;
+        padding-bottom: .3125rem;
+    }
+}
 
 
+/* Media Querie mobile para CLIENTES */
+
+@media (max-width: 575.98px){
+
+/* Main */
+
+    main .contenido2 .losClientes{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.125rem;
+    }
+
+main .contenido2 .losClientes img{
+    display: block;
+    width: 18.75rem;
+    height: 25rem;
+    margin-right: 6.25rem;
+    }
+    
+}
+
+
+/* Media Querie mobile para CONTACTO */
+
+@media (max-width: 575.98px) {
+
+    /* Main */
+
+    main .contenido3 .titulo{
+        display:  block !important;
+        text-align: center;       
+    }
+
+    main .contenido3 .titulo h2{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 1.875rem;
+    }
+    
+    main .contenido3 .titulo h1{
+        font-size: 1.25rem;
+        white-space: nowrap;
+        padding-top: 0;
+    }
+
+    main .contenido3 .formulario-container {
+        grid-template-columns: 1fr; /* Mapa y formulario apilados uno sobre otro en pantallas pequeñas */
+        gap: .625rem;
+    }
+  
+    main .contenido3 .formulario-container .mapa img {
+        width: 100%; /* El mapa toma todo el ancho en pantallas pequeñas */
+    } */
+
+    main .contenido3 .formulario-container .mapa p{
+        font-size: 1.0625rem;
+        margin-bottom: .625rem;
+        padding-top: 0;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+  }
+
+    
+
+    
+
+    }
