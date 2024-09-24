@@ -561,7 +561,7 @@ input, textarea{
 
 /* MEDIA QUERIE PARA DISPOSITIVOS MÓVILES */
 
-@media screen and (min-width: 320px) and (max-width: 1023px){
+@media screen and (min-width: 320px) and (max-width: 767.9px){
 
 /* Header - común para los 5 HTML */
 
@@ -591,33 +591,28 @@ header .header1{
     max-width: 150px;
 }
 
-/* Barra de navegación común para los 5 HTML */
 
-.navbar {
-    flex-direction: column;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 1); 
-}
+/* Footer - común para los 5 HTML */
 
-.navbar .collapse.show{
-    background-color: hsla(96, 57%, 43%, 0.3) ;
-}
-
-.navbar .navbar-toggler{
-    margin: 0 auto;
-    border: none;
-}
-
-.navbar-toggler:focus, .navbar-toggler:active{
-    outline: none;
-    box-shadow: none;
-    background-color: transparent; 
-    border: none; 
-}
-
-.navbar .navbar-nav{
+footer{
     text-align: center;
 }
+
+footer .datos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer address, footer .telefonos{
+    margin-bottom: 10px;
+}
+
+.copyright{
+    margin: .9375rem;
+    font-size: .625rem;
+}
+
 
 /* Main de INDEX */
 
@@ -675,26 +670,38 @@ main .servicios .tilde{
     text-align: center;
     font-size: 1.125rem;
 }
-
-/* Footer - común para los 5 HTML */
-
-footer{
-    text-align: center;
 }
 
-footer .datos{
-    display: flex;
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+
+
+/* Barra de navegación común para los 5 HTML */
+
+.navbar {
     flex-direction: column;
-    align-items: center;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 1); 
 }
 
-footer address, footer .telefonos{
-    margin-bottom: 10px;
+.navbar .collapse.show{
+    background-color: hsla(96, 57%, 43%, 0.3) ;
 }
 
-.copyright{
-    margin: .9375rem;
-    font-size: .625rem;
+.navbar .navbar-toggler{
+    margin: 0 auto;
+    border: none;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent; 
+    border: none; 
+}
+
+.navbar .navbar-nav{
+    text-align: center;
 }
 
 
@@ -861,4 +868,114 @@ main .contenido3 .formulario-container .mapa p{
 
 }
 
+/* MEDIA QUERIE PARA TABLET */
 
+@media screen and (min-width: 767.9px) and (max-width: 1023.9px){
+
+
+/* Main de INDEX */
+
+main .contenido{
+    padding: 10px;
+}
+
+main .contenido h1{   
+    padding-top: 3%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 1.5625rem;
+    font-weight: bolder;
+}
+
+.cajaFotosCuerpo{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajaFotosCuerpo img{
+    width: 100%;
+    max-width: 31.25rem; 
+    margin-bottom: 10px;
+}
+
+main .contenido article{
+    font-size: .9375rem;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+main .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "lp pm me"
+    "ph .  os"; /* 'os' debajo de 'me' */
+    gap: .9375rem;
+    justify-items: center;
+    align-items: center;
+}
+
+
+main .servicios .tilde{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 7.5rem;
+    height: 11.25rem;
+    
+}
+
+.tilde img{
+    width: 120px; 
+}
+
+main .servicios .tilde:nth-child(3) {
+    grid-area: me;
+}
+
+main .servicios .tilde:nth-child(4){
+    grid-area: ph;
+}
+
+main .servicios .tilde:nth-child(5){
+    grid-area: os;
+}
+
+.tilde h3{
+    font-size: .9375rem !important;
+}
+
+
+/* Estilos para el main de SERVICIOS */
+
+main .contenido .titulo{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .625rem;
+}
+
+main .contenido .titulo h1, main .contenido .titulo h2{
+    padding-top: 3%;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.5625rem;
+    font-weight: bolder;
+}
+
+.servicio {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-left: 2.5rem;
+}
+
+.servicio img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+}
+
+}
