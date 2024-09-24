@@ -557,10 +557,13 @@ input, textarea{
 }
 
 
-/* Media Querie sm (mobile-Bootstrap) para INDEX */
 
-@media (max-width: 575.98px) {
 
+/* MEDIA QUERIE PARA DISPOSITIVOS MÓVILES */
+
+@media screen and (min-width: 320px) and (max-width: 1023px){
+
+/* Header - común para los 5 HTML */
 
 header .header1{
     display: flex;
@@ -588,7 +591,7 @@ header .header1{
     max-width: 150px;
 }
 
-  /* Barra de navegación */
+/* Barra de navegación común para los 5 HTML */
 
 .navbar {
     flex-direction: column;
@@ -596,33 +599,29 @@ header .header1{
     background-color: rgba(255, 255, 255, 1); 
 }
 
- /* Barra de navegación cuando el menú móvil está abierto */
- .navbar .collapse.show {
+.navbar .collapse.show{
     background-color: hsla(96, 57%, 43%, 0.3) ;
-     /* Fondo semitransparente con tono negro */
-  }
+}
 
-.navbar .navbar-toggler {
+.navbar .navbar-toggler{
     margin: 0 auto;
     border: none;
 }
 
-/* Evitar que el botón quede marcado en negro después de hacer clic */
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none;
-  box-shadow: none;
-  background-color: transparent; /* Evita que el fondo cambie a negro */
-  border: none; /* Elimina cualquier borde que pueda aparecer */
+.navbar-toggler:focus, .navbar-toggler:active{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent; 
+    border: none; 
 }
 
-.navbar .navbar-nav {
+.navbar .navbar-nav{
     text-align: center;
 }
 
+/* Main de INDEX */
 
-  /* Main */
-main .contenido {
+main .contenido{
     padding: 10px;
 }
 
@@ -635,13 +634,13 @@ main .contenido h1{
     margin-top: .9375rem;
 }
 
-.cajaFotosCuerpo {
+.cajaFotosCuerpo{
     display: flex !important;
     flex-direction: column;
     align-items: center;
 }
 
-.cajaFotosCuerpo img {
+.cajaFotosCuerpo img{
     width: 100%;
     max-width: 31.25rem; 
     margin-bottom: 10px;
@@ -677,213 +676,189 @@ main .servicios .tilde{
     font-size: 1.125rem;
 }
 
-  /* Footer */
-footer {
-    text-align: center;
+/* Footer - común para los 5 HTML */
 
+footer{
+    text-align: center;
 }
 
-footer .datos {
+footer .datos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer address, footer .telefonos {
+footer address, footer .telefonos{
     margin-bottom: 10px;
 }
 
-.copyright {
+.copyright{
     margin: .9375rem;
     font-size: .625rem;
 }
+
+
+/* Main de TRABAJOS */
+
+main .contenido2 .titulo {
+    display:  block !important;
+    text-align: center;       
+}
+
+main .contenido2 .titulo h2{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: 1.875rem;
+}
+
+main .contenido2 .titulo h1{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: .625rem;
+}
+
+main .contenido2 .losTrabajos{
+    display: flex !important;
+    flex-direction: column;
+    gap: .9375rem; 
+    align-items: center;
+}
+
+main .contenido2 .losTrabajos .trabajo{
+    width: 100%;
+    text-align: center;
+}
+
+main .contenido2 .losTrabajos .trabajo img{
+    max-width: 100%;
+    height: auto !important;
+}
+
+main .contenido2 .losTrabajos .trabajo p{
+    margin-top: .3125rem;
+    font-size: 1.125rem;
 }
 
 
-/* Media Querie sm (mobile-Bootstrap) para TRABAJOS */
+/* Main de SERVICIOS */
 
+main .contenido .titulo{
+    display:  block !important;
+    text-align: center;       
+}
 
-@media (max-width: 575.98px) {
+main .contenido .titulo h2{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: 1.25rem;
+}
 
-    /* Main */
+main .contenido .titulo h1{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: .1875rem;
+}
 
-    main .contenido2 .titulo {
-        display:  block !important;
-        text-align: center;       
-    }
+main .contenido .losServicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 
-    main .contenido2 .titulo h2{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: 1.875rem;
-    }
+main .contenido .losServicios h3{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 1.5625rem;
+}
 
-    main .contenido2 .titulo h1{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: .625rem;
-        
-    }
+main .contenido .losServicios .caja1{
+    display: flex;
+    flex-direction: column;
+}
 
-    main .contenido2 .losTrabajos{
-        display: flex !important;
-        flex-direction: column;
-        gap: .9375rem; 
-        align-items: center;
-    }
+main .contenido .losServicios .caja1 img{
+    max-width: 31.25rem;
+}
 
-    main .contenido2 .losTrabajos .trabajo{
-        width: 100%;
-        text-align: center;
-    }
+main .contenido .losServicios .caja1 p{
+    padding: .9375rem 0 .5rem 0;
+    max-width: 100%;
+}
 
-    main .contenido2 .losTrabajos .trabajo img{
-        max-width: 100%;
-        height: auto !important;
-    }
+main .contenido section #os{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    padding-top: .9375rem;
+}
 
-    main .contenido2 .losTrabajos .trabajo p{
-        margin-top: .3125rem;
-        font-size: 1.125rem;
-    }
+main .contenido section .otrosServicios{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem
+}
+
+main .contenido section .otrosServicios .servicio h3{
+    font-size: 1.25rem;
+    padding-bottom: .3125rem;
 }
 
 
+/* Main de CLIENTES */
 
-/* Media Querie mobile para SERVICIOS */
-
-@media (max-width: 575.98px){
-
-/* Main */
-
-    main .contenido .titulo {
-        display:  block !important;
-        text-align: center;       
-    }
-
-    main .contenido .titulo h2{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: 1.25rem;
-    }
-
-    main .contenido .titulo h1{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: .1875rem;
-    }
-
-    main .contenido .losServicios{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-
-    main .contenido .losServicios h3{
-        text-align: center;
-        font-size: 1.25rem;
-        margin-top: 1.5625rem;
-    }
-
-    main .contenido .losServicios .caja1{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .contenido .losServicios .caja1 img{
-        max-width: 31.25rem;
-        
-    }
-
-    main .contenido .losServicios .caja1 p{
-        padding: .9375rem 0 .5rem 0;
-        max-width: 100%;
-    }
-
-    main .contenido section #os{
-        font-size: 1.25rem;
-        font-weight: bolder;
-        padding-top: .9375rem;
-    }
-
-    main .contenido section .otrosServicios{
-        display: flex;
-        flex-direction: column;
-        gap: 1.5625rem
-    }
-
-    main .contenido section .otrosServicios .servicio h3{
-        font-size: 1.25rem;
-        padding-bottom: .3125rem;
-    }
+main .contenido2 .losClientes{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.125rem;
 }
-
-
-/* Media Querie mobile para CLIENTES */
-
-@media (max-width: 575.98px){
-
-/* Main */
-
-    main .contenido2 .losClientes{
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        gap: 3.125rem;
-    }
 
 main .contenido2 .losClientes img{
     display: block;
     width: 18.75rem;
     height: 25rem;
     margin-right: 6.25rem;
-    }
+}
     
+
+    /* Main de CONTACTO */
+
+main .contenido3 .titulo{
+    display:  block !important;
+    text-align: center;       
 }
 
+main .contenido3 .titulo h2{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: 1.875rem;
+}    
 
-/* Media Querie mobile para CONTACTO */
+main .contenido3 .titulo h1{
+    font-size: 1.25rem;
+    white-space: nowrap;
+    padding-top: 0;
+}
 
-@media (max-width: 575.98px){
+main .contenido3 .formulario-container {
+    grid-template-columns: 1fr; 
+    gap: .625rem;
+}
 
-    /* Main */
+main .contenido3 .formulario-container .mapa img{
+    width: 100%; 
+} 
 
-    main .contenido3 .titulo{
-        display:  block !important;
-        text-align: center;       
-    }
+main .contenido3 .formulario-container .mapa p{
+    font-size: 1.0625rem;
+    margin-bottom: .625rem;
+    padding-top: 0;
+}
+.submit-btn {
+    width: 100%;
+}
 
-    main .contenido3 .titulo h2{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: 1.875rem;
-    }
-    
-    main .contenido3 .titulo h1{
-        font-size: 1.25rem;
-        white-space: nowrap;
-        padding-top: 0;
-    }
-
-    main .contenido3 .formulario-container {
-        grid-template-columns: 1fr; /* Mapa y formulario apilados uno sobre otro en pantallas pequeñas */
-        gap: .625rem;
-    }
-  
-    main .contenido3 .formulario-container .mapa img {
-        width: 100%; /* El mapa toma todo el ancho en pantallas pequeñas */
-    } */
-
-    main .contenido3 .formulario-container .mapa p{
-        font-size: 1.0625rem;
-        margin-bottom: .625rem;
-        padding-top: 0;
-    }
-    .submit-btn {
-        width: 100%;
-    }
 }
 
 
