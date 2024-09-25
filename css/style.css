@@ -11,8 +11,7 @@
 body{
     font-family: "Radio Canada Big", sans-serif;
     height: 100%;
-    margin: 0;
-    
+    margin: 0 auto;
 }
 
 /* Estilos para el header*/
@@ -76,8 +75,8 @@ header .logo img{
 /* Barra de navegación Bootstrap */
 
 .navbar {
-    background-color: rgba(255, 255, 255, 1); /* Color de fondo completamente opaco */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: rgba(255, 255, 255, 1); 
+    transition: background-color 0.3s ease; 
   }
 
 .navbar .nav-link{
@@ -209,12 +208,9 @@ main .servicios .tilde a h3 span{
     display: block;
 }
 
-
-
 main .servicios .tilde a:hover{
     color: #61AD2F;
 }
-
 
 
 /* Estilos para el footer */
@@ -262,7 +258,6 @@ footer .datos .telefonos p i {
     margin-top: 0;
     margin-bottom: 0;
 }
-
 
 
 /* Estilos para el main de SERVICIOS */
@@ -346,14 +341,14 @@ section {
 
 .otrosServicios {
     display: flex;
-    justify-content:space-evenly;
-    gap: 9.375rem; 
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .servicio {
-    width: 100%;
-    max-width: 600px;
+    flex: 1;
     text-align: center;
+    padding: 10px;
 }
 
 .servicio h3 {
@@ -373,8 +368,9 @@ section {
     font-size: 16px;
     line-height: 1.5;
     color: #000000;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.25rem;
+    margin-left: 6%;
 }
 
 body {
@@ -558,7 +554,6 @@ input, textarea{
 
 
 
-
 /* MEDIA QUERIE PARA DISPOSITIVOS MÓVILES */
 
 @media screen and (min-width: 320px) and (max-width: 767.9px){
@@ -673,7 +668,8 @@ main .servicios .tilde{
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 1023px){
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
 
 
 /* Barra de navegación común para los 5 HTML */
@@ -811,6 +807,10 @@ main .contenido section .otrosServicios .servicio h3{
     padding-bottom: .3125rem;
 }
 
+main .contenido section .otrosServicios .servicio p{
+    text-align: left;
+}
+
 
 /* Main de CLIENTES */
 
@@ -827,9 +827,9 @@ main .contenido2 .losClientes img{
     height: 25rem;
     margin-right: 6.25rem;
 }
-    
 
-    /* Main de CONTACTO */
+
+/* Main de CONTACTO */
 
 main .contenido3 .titulo{
     display:  block !important;
@@ -865,12 +865,11 @@ main .contenido3 .formulario-container .mapa p{
 .submit-btn {
     width: 100%;
 }
-
 }
 
 /* MEDIA QUERIE PARA TABLET */
 
-@media screen and (min-width: 767.9px) and (max-width: 1023.9px){
+@media screen and (min-width: 767.9px) and (max-width: 1025px){
 
 
 /* Main de INDEX */
@@ -881,7 +880,7 @@ main .contenido{
 
 main .contenido h1{   
     padding-top: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
     text-align: center;
     font-size: 1.5625rem;
     font-weight: bolder;
@@ -891,26 +890,29 @@ main .contenido h1{
     display: flex !important;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .cajaFotosCuerpo img{
-    width: 100%;
     max-width: 31.25rem; 
-    margin-bottom: 10px;
+    margin-bottom: .9375rem;
 }
 
 main .contenido article{
     font-size: .9375rem;
     margin-top: 5%;
     margin-bottom: 10%;
+    text-align: left;
+    padding-left: 3.5%;
 }
 
-main .servicios {
+main .servicios{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     "lp pm me"
-    "ph .  os"; /* 'os' debajo de 'me' */
+    "ph .  os"; 
     gap: .9375rem;
     justify-items: center;
     align-items: center;
@@ -930,7 +932,7 @@ main .servicios .tilde{
     width: 120px; 
 }
 
-main .servicios .tilde:nth-child(3) {
+main .servicios .tilde:nth-child(3){
     grid-area: me;
 }
 
@@ -964,18 +966,50 @@ main .contenido .titulo h1, main .contenido .titulo h2{
     font-weight: bolder;
 }
 
-.servicio {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    margin-left: 2.5rem;
+.otrosServicios {
+    flex-direction: column;
+    align-items: center;
 }
 
-.servicio img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1.25rem;
-    border-radius: 8px;
+.servicio {
+    width: 100%;
+}
+
+.servicio p{
+    text-align: left;
+    margin-left: 5%;
+}
+
+
+/* Estilos para el main de TRABAJOS */
+
+main .contenido2 .titulo{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: .625rem;
+}
+
+main .contenido2 .titulo h1, main .contenido2 .titulo h2{   
+    padding-top: 5%;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.5625rem;
+    font-weight: bolder;
+}
+
+main .contenido2 .losTrabajos p{
+    padding-top: .625rem;
+    padding-bottom: 1.25rem;
+    font-size: 1.5625rem !important;
+}
+
+/* Ajuste para pantallas superiores a 1440 px */
+
+@media (min-width: 1441px) {
+    body, header{
+        max-width: 100%;
+    }
 }
 
 }
