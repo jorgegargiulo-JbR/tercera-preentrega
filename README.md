@@ -18,6 +18,7 @@ SEO
 -	Inserción en cada HTML de la “meta-description”.
 -	Titles HTML: sin modificaciones.
 -	Se cambiaron los nombres de archivos genéricos por nombres específicos y descriptivos.
+
 MQ
 -	Los 5 HTML fueron adaptados y testeados con el “Google Inspector” en los siguientes tamaños:
 o	320 px - Móvil S
