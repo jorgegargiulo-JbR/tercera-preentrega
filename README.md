@@ -7,7 +7,7 @@ Los puntos desarrollados para esta preentrega, son detallados a continuación:
 GITHUB
 -	Punto de partida: Segunda Preentrega.
 -	Corrección de las ruras de enlaces de las páginas que se encuentran dentro de la carpeta “pages” (segundo commit).
--	Hasta llegar al resultado final se realizaron 16 commits y se utilizaron 8 ramas.
+-	Hasta llegar al resultado final se realizaron 20 commits y se utilizaron 8 ramas.
 
 HTML
 -	Completos, estructurados, funcionales.
